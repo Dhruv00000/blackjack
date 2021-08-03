@@ -7,31 +7,9 @@
 
 1. Install [**python**](https://www.python.org/downloads/)
 2. Download [`blackjack.py`](https://github.com/DhruvMitna/blackjack/blob/master/blackjack.py).
-3. You can run the file using either of these methods-:
-
-    1. Using command prompt
-
-        1. Open a command window in the downloads folder-:
-
-            1. Opening cmd directly in the folder
-
-                1. Open the donwloads folder.
-                2. Click on the address bar in the file explorer.
-                3. Type `'cmd'`
-
-            2. Cd-ing into the downloads folder
-
-                1. Press `win + r`
-                2. Type `'cmd'`
-                3. Type `'cd Downloads'`
-
-        2. Type `'blackjack.py'` and press enter.
-
-    2. Directly running the file
-
-        1. Open the downloads folder.
-        2. Double click `blakcjack.py`
-        3. If windows asks you to select a porgram to open the file, select python and click ok.
+3. Open the downloads folder.
+4. Double click `blakcjack.py`
+5. If windows asks you to select a porgram to open the file, select python and click ok.
 
 ## javascript
 
