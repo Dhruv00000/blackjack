@@ -52,4 +52,4 @@
         2. Type `'cmd'` and press enter.
         3. Type `'cd Downloads'` and press enter.
 
-5. Type `'node blackjack.js'` (you cant replace `blackjack.js` with the name of the file that you downloaded.)
+5. Type `'node blackjack.js'` (you can replace `blackjack.js` with the name of the file that you downloaded.)
