@@ -8,7 +8,7 @@ dealer = randint(1,22)
 # A loop that keeps on executing till either the dealer or player win or lose.
 while hand < 21 and dealer < 21:
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}          {hand}\n\n")
+    print(f"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\n")
 
     move = input("Enter your move (stand/hit)\n\n>").lower()
   
@@ -26,25 +26,25 @@ while hand < 21 and dealer < 21:
         print("Unkown command.")
         exit
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}          {hand}\n\n")
+    print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\n")
 
 # Conditions that cdetermine who won.
 if hand > 21:
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}          {hand}\n\nBust! You lost.")
+    print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\nBust! You lost.")
 
 elif dealer > 21:
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}          {hand}\n\nDealer bust! Victory.")
+    print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\nDealer bust! Victory.")
 
 elif hand == dealer:
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}          {hand}\n\nPush! Noone won.")
+    print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\nPush! Noone won.")
 
 elif hand == 21:
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}          {hand}\n\nBlackjack! Victory.")
+    print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\nBlackjack! Victory.")
 
 else:
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}          {hand}\n\nDealer blackjack! You lost.")
+    print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\nDealer blackjack! You lost.")
