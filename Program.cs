@@ -39,7 +39,7 @@ namespace blackjack {
 
             else Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\nDealer blackjack! You lost.");
 
-            Console.Write("Press enter to exit...");
+            Console.Write("\nPress enter to exit...");
             Console.ReadLine();
 
         }
