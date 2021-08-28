@@ -24,7 +24,6 @@ while hand < 21 and dealer < 21:
     else:
 
         print("Unkown command.")
-        exit
 
     print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\n")
 

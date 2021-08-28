@@ -3,16 +3,9 @@
 const ps = require("prompt-sync");
 const input = ps();
 
-// defininga  function to get a random integer from a given range.
-function randInt(min, max) {
-    
-    return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
-
-}
-
 // Setting the values of both hands to random integers.
-let hand = randInt(1, 22);
-let dealer = randInt(1, 22)
+let hand = (Math.floor(Math.random() * (Math.floor(22) - Math.ceil(1) + 1)) + Math.ceil(1));
+let dealer = (Math.floor(Math.random() * (Math.floor(22) - Math.ceil(1) + 1)) + Math.ceil(1))
 
 // A loop that keeps executing until either the player or the dealer wins or loses.
 while (hand < 21 && dealer < 21) {
@@ -22,9 +15,9 @@ while (hand < 21 && dealer < 21) {
     let move = input("Enter your move (stand/hit)\n\n>").toLowerCase()
 
     // Selectinga  random card from the deck.
-    if (move === "hit") hand += randInt(1, 13)
+    if (move === "hit") hand += (Math.floor(Math.random() * (Math.floor(13) - Math.ceil(1) + 1)) + Math.ceil(1))
 
-    else if (move === "stand") dealer += randInt(1, 13)
+    else if (move === "stand") dealer += (Math.floor(Math.random() * (Math.floor(13) - Math.ceil(1) + 1)) + Math.ceil(1))
 
     else console.log("Unknown command.")
 
