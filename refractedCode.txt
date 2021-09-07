@@ -1,0 +1,89 @@
+// The default code.
+using System;
+using System.Diagnostics;
+
+namespace blackjack;
+
+[DebuggerDisplay($"{{{nameof(DebuggerDisplay)}(),nq}}")]
+class refractedCode
+{
+    private const int MaxValue = 22;
+
+    public refractedCode()
+    {
+    }
+
+    static void Main(string[] args)
+    {
+
+        // Initializing the random object.
+        Random rnd = new Random();
+
+        int hand = rnd.Next(1,
+                            MaxValue);
+        int dealer = rnd.Next(1,
+                              MaxValue);
+
+        // Asking the user for a move until either the dealer or the player wins or loses.
+        while (hand < 21
+               && dealer < 21)
+        {
+
+            // Showing the current amount on both hands.
+            Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\n");
+
+            Console.Write("Enter your move (stand/hit)\n\n>");
+            string move = Console.ReadLine();
+            move.ToLower();
+
+            // Drawing a card for either the dealer or the player depending on the input.
+            switch (move
+)
+            {
+                case "hit":
+                    hand += rnd.Next(1, 13);
+                    break;
+                case "stand":
+                    dealer += rnd.Next(1, 13);
+                    break;
+                default:
+                    Console.WriteLine("Unkown command.");
+                    break;
+            }
+
+            Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\n");
+
+        }
+
+        // Determining the results according to the hands.
+        switch (hand)
+        {
+            case > 0b1_0101:
+                Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nBust! You lost.");
+                break;
+            default:
+                if (dealer > 21) Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nDealer bust! Victory.");
+
+                else if (hand == dealer) Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nPush! Noone won.");
+
+                else if (hand == 21) Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nBlackjack! Victory.");
+
+                else Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nDealer blackjack! You lost.");
+                break;
+        }
+
+        // Stopping the window from instantly closing.
+        Console.Write(@"
+Press enter to exit...");
+        Console.ReadLine();
+
+    }
+
+    public override bool Equals(object obj) => base.Equals(obj);
+
+    public override int GetHashCode() => base.GetHashCode();
+
+    public override string ToString() => base.ToString();
+
+    private string DebuggerDisplay => ToString();
+}
