@@ -17,7 +17,7 @@ namespace blackjack {
             while (hand < 21 && dealer < 21) {
 
                 // Showing the current amount on both hands.
-                Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\n");
+                Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\n");
 
                 Console.Write("Enter your move (stand/hit)\n\n>");
                 string move = Console.ReadLine();
@@ -30,20 +30,20 @@ namespace blackjack {
 
                 else Console.WriteLine("Unkown command.");
 
-                Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\n");
+                Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}");
 
             }
 
             // Determining the results according to the hands.
-            if (hand > 21) Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\nBust! You lost.");
+            if (hand > 21) Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nBust! You lost.");
 
-            else if (dealer > 21) Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\nDealer bust! Victory.");
+            else if (dealer > 21) Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nDealer bust! Victory.");
 
-            else if (hand == dealer) Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\nPush! Noone won.");
+            else if (hand == dealer) Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nPush! Noone won.");
 
-            else if (hand == 21) Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\nBlackjack! Victory.");
+            else if (hand == 21) Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nBlackjack! Victory.");
 
-            else Console.WriteLine("\nDelaer hand:     Your hand:\n\n" + dealer + "               " + hand + "\n\nDealer blackjack! You lost.");
+            else Console.WriteLine($"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\nDealer blackjack! You lost.");
 
             // Stopping the window from instantly closing.
             Console.Write("\nPress enter to exit...");
