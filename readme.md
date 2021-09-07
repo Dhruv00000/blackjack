@@ -6,8 +6,7 @@ To play this game, you can use either of these 2 methods-:
 ## The easy way
 
 1. Download `release.zip` from [the **latest** release](https://github.com/DhruvMitna/blackjack/releases/latest).
-2. Extract the zip and open the extracted folder.
-3. Run the `exe` file.
+2. Extract the zip and open the extracted folder and run the `exe` file in it.
 
 ## The hard way
 
