@@ -1,20 +1,18 @@
-# Importing the essential function from a module.
 from random import randint
 
-# Setting the values of both hands to random integers between 1 and 22.
+# Dealing hands.
 hand = randint(1,22)
 dealer = randint(1,22)
 
-# A loop that keeps on executing till either the dealer or player win or lose.
 while hand < 21 and dealer < 21:
 
-    print(f"\nDelaer hand:     Your hand:\n\n{dealer}               {hand}\n\n")
+    print(f"\nDealer hand:     Your hand:\n\n{dealer}               {hand}\n\n")
 
     move = input("Enter your move (stand/hit)\n\n>").lower()
   
     if move == "hit":
 
-        # Selecting a random card from the deck.
+        # Drawing.
         hand += randint(1,13)
 
     elif move == "stand":
@@ -27,7 +25,7 @@ while hand < 21 and dealer < 21:
 
     print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\n")
 
-# Conditions that cdetermine who won.
+# Conclusion.
 if hand > 21:
 
     print(f"\nDelaer hand:     Your hand:\n\n{dealer}            {hand}\n\nBust! You lost.")
